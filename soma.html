@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de soma</title>
+    <style>
+      
+        h1{
+            color: blue;
+        }
+    </style>
+    <script>
+        function somarValores() {
+          // Obter os valores digitados pelo usuário
+          let valor1 = parseFloat(document.getElementById("valor1").value);
+          let valor2 = parseFloat(document.getElementById("valor2").value);
+    
+          // Calcular a soma
+          let soma = valor1 + valor2;
+    
+          // Exibir a soma na página
+          document.getElementById("resultado").textContent = "O resultado da soma é: " + soma;
+        }
+      </script>
+    </head>
+    <body>
+      <h1>Soma de Valores</h1>
+      
+      <label for="valor1">Calcular</label>
+      <input type="number" id="valor1">
+      
+      <label for="valor2">+</label>
+      <input type="number" id="valor2">
+      
+      <button onclick="somarValores()">Calcular Soma</button>
+      
+      <p id="resultado"></p>
+    </body>
+    </html>
